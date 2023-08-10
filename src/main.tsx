@@ -4,9 +4,19 @@ import { App } from './App.tsx';
 import { GlobalStyle } from "./styles/global.ts";
 //import { ThemeProvider } from 'styled-components';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-    <GlobalStyle />
-  </React.StrictMode>,
-)
+
+/*
+setTimeout(() => {}, 3000);
+*/
+
+
+ReactDOM.createRoot(
+  document.getElementById('root')!).render(
+    <React.StrictMode>
+      <App />
+      <GlobalStyle />
+    </React.StrictMode>,
+  )
+
+
+

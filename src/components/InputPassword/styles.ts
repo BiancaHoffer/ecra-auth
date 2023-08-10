@@ -10,6 +10,7 @@ export const InputContainer = styled.div`
   color: #A3A8AB;
   background-color: transparent;
   box-shadow: 1px 3px 20px -19px rgba(0,0,0,0.66);
+  margin-bottom: 16px;
 
   transition: 0.4s;
 
@@ -47,3 +48,9 @@ export const ButtonShowPassword = styled.button`
   border: none;
   padding: 6px 12px;
 `;
+
+export const ErrorMessage = styled.p`
+  color: red;
+  margin-top: -8px;
+  align-self: start;
+`

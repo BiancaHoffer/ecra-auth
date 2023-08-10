@@ -1,20 +1,23 @@
 import { InputHTMLAttributes } from "react";
-import { InputContainer } from "./styles";
+import { ErrorMessage, InputContainer } from "./styles";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   errors?: any;
   register: any;
   name: string;
-  placeholder?: string;
 }
 
-export function Input({ register, placeholder, name }: InputProps) {
+export function Input({ register, name, errors }: InputProps) {
+  //console.log(errors[name].message)
+
   return (
     <>
       <InputContainer
-        placeholder={placeholder}
+        placeholder="E-mail"
         {...register(name)}
       />
+
+      {errors[name]?.message && <ErrorMessage>{errors[name]?.message}</ErrorMessage>}
     </>
   )
 }

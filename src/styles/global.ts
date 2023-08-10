@@ -7,18 +7,6 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
-   /* body::-webkit-scrollbar {
-      width: 4px;
-    }
-
-    body::-webkit-scrollbar-track {
-      background: var(--gray-100);     
-    }
-
-    body::-webkit-scrollbar-thumb {
-      background-color: var(--gray-800);
-    }*/
-
     body, input, textarea, button {
         font-family: 'Roboto', sans-serif;
         font-weight: 400;

@@ -7,6 +7,7 @@ export const InputContainer = styled.input`
   border: 1.6px solid #f2f2f2;
   width: 100%;
   box-shadow: 1px 3px 20px -19px rgba(0,0,0,0.66);
+  margin-bottom: 16px;
 
   transition: 0.4s;
 
@@ -30,3 +31,10 @@ export const InputContainer = styled.input`
     color: #A3A8AB;
   }
 `
+
+export const ErrorMessage = styled.p`
+  color: red;
+  margin-top: -8px;
+  align-self: start;
+`
+
