@@ -1,35 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Container, ContainerAuth, Video, ContentAuth } from "./styles";
+import backgroundvideo from "./assets/background.mp4";
+import { useForm } from "react-hook-form";
 
-function App() {
-  const [count, setCount] = useState(0)
+import { Input } from "./components/Input";
+import { Button } from "./components/Button";
+import { InputPassword } from "./components/InputPassword";
+
+type FormData = {
+  email: string;
+  password: string;
+};
+
+export function App() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm<FormData>({
+    defaultValues: {
+      email: "",
+      password: ""
+    }
+  });
+
+  function handleSignIn(data: FormData) {
+    console.log(data);
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Container>
+      <Video src={backgroundvideo} autoPlay loop muted />
+      <ContainerAuth>
+        <ContentAuth>
+          <h1>Welcome</h1>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+
+          <form onSubmit={handleSubmit(handleSignIn)}>
+            <Input
+              errors={errors}
+              register={register}
+              type="email"
+              placeholder="E-mail"
+              name="E-mail"
+
+            />
+            <InputPassword
+              errors={errors}
+              register={register}
+              placeholder="Password"
+              name="Password"
+            />
+
+            <Button title="Sign In" type="submit" />
+          </form>
+        </ContentAuth>
+      </ContainerAuth>
+    </Container>
   )
 }
 
-export default App
+
