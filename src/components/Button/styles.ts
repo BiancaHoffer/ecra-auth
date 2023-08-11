@@ -9,6 +9,7 @@ export const ButtonContainer = styled.button`
   font-weight: 600;
   width: 100%;
   box-shadow: 1px 3px 20px -19px rgba(0,0,0,0.66);
+  margin-top: 16px;
 
   transition: 0.4s;
 
@@ -18,5 +19,9 @@ export const ButtonContainer = styled.button`
 
   &:focus {
     background: #A1C9FF;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
   }
 `

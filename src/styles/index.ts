@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  background-color: #0276B5;
+  background-color: #84C6FF;
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -47,7 +47,7 @@ export const ContentAuth = styled.div`
     margin-bottom: 18px;
   }
 
-  p {
+  > p {
     font-size: 0.9rem;
     text-align: justify;
     color: #A3A8AB;
