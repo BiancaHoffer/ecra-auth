@@ -6,4 +6,6 @@ Principais tecnologias utilizadas
 - TypeScript;
 - React Hook Form;
 - Zod;
-- Styled-components. 
+- Styled-components.
+
+<video src="https://github.com/BiancaHoffer/ecra-auth/assets/99914904/01d15733-67e9-421b-a1ef-31af36eb065a" /> 
