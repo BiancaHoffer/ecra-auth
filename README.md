@@ -5,4 +5,5 @@ Principais tecnologias utilizadas
 - Vite;
 - TypeScript;
 - React Hook Form;
+- Zod;
 - Styled-components. 
